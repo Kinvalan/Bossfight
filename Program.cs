@@ -35,7 +35,6 @@ Hero is the winner!
 
 
 
-
 namespace Bossfight
 {
     internal class Program
@@ -67,8 +66,8 @@ namespace Bossfight
             while (true)
             {
                 // Hero angriper Boss:
-                Console.WriteLine("Hero attacks boss...");
-                hero.Fight(attacker: hero, target: boss);
+                Console.WriteLine("Hero tries to attack boss...");
+                hero.Fight(target: boss);
 
                 
                 if (hero.Stamina <= 0)
@@ -84,8 +83,8 @@ namespace Bossfight
 
 
                 // Boss angriper Hero:
-                Console.WriteLine("Boss attacks hero...");
-                boss.Fight(attacker: boss, target: hero);
+                Console.WriteLine("Boss tries to attack hero...");
+                boss.Fight(target: hero);
 
                 if (boss.Stamina <= 0)
                 {
